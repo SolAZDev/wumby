@@ -16,6 +16,7 @@
     "@quasar/extras": "^1.0.0",
     "axios": "^1.2.1",
     "mitt": "^3.0.0",
+    "openweather-api-node": "^3.1.0",
     "pinia": "^2.0.11",
     "pug": "^3.0.2",
     "quasar": "^2.6.0",

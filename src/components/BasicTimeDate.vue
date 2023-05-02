@@ -1,19 +1,21 @@
 <template lang="pug">
 q-card.column.justify-around.fit
   q-card-section.text-center
-    #timeText {{ TimeString }} #[small.text-subtitle2#meridiem(v-if="showMeridiem") {{ meridiem }}]
+    #timeText {{ TimeString }} #[small.text-subtitle2#meridiem(v-if="settings.clockSettings.showMeridiem") {{ meridiem }}]
     #dateText {{ DateString }}
 </template>
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import { DateTime } from 'luxon';
-//TODO: Look up settings
-const showMeridiem = ref(true);
+import { userSettings } from '../stores/userSettings';
+const settings = userSettings();
+
+// const showMeridiem = ref(true);
 const DateString = computed(() => {
-  return DateTime.now().toFormat('EEEE MMMM dd, yyyy');
+  return DateTime.now().toFormat(settings.clockSettings.dateFormat);
 });
 const TimeString = computed(() => {
-  return DateTime.now().toFormat('hh:mm');
+  return DateTime.now().toFormat(settings.clockSettings.timeFormat);
 });
 const meridiem = computed(() => {
   return DateTime.now().toFormat('a');

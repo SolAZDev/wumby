@@ -2754,6 +2754,11 @@ open@^8.4.0:
     is-docker "^2.1.1"
     is-wsl "^2.2.0"
 
+openweather-api-node@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/openweather-api-node/-/openweather-api-node-3.1.0.tgz#2a34a7df8976910e50ffa789bfd44e872bc7f2c0"
+  integrity sha512-eDtJAUNSOnnI8L+FAez5X2dJP52LmZdhlenBEAkCQG678/N76ehTfyRNZtACBTayZY7VGTxDtZnDa0cWxzK0fw==
+
 optionator@^0.9.1:
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/optionator/-/optionator-0.9.1.tgz#4f236a6373dae0566a6d43e1326674f50c291499"
